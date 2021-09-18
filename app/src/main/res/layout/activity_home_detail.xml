@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeDetailActivity"
+    android:background="@color/gray"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:src="@drawable/bg_post2"
+        android:scaleType="fitCenter"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_half_rounde">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:text="Papa Laundry"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/img_location"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_below="@+id/name"
+                android:src="@drawable/ic_location"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/img_location"
+                android:layout_below="@+id/name"
+                android:text="ward no 4 pak"
+                android:layout_marginStart="4dp"/>
+
+            <ImageButton
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_fav"
+                android:elevation="10dp"
+                android:background="@drawable/fav_bg"/>
+            <TextView
+                android:id="@+id/period_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location"
+                android:text="Work Period"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+
+            <HorizontalScrollView
+                android:id="@+id/work_period_chip_group"
+                android:layout_below="@+id/period_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleLine="true"
+                    >
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="Weekly"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:elevation="10dp"
+                        app:chipBackgroundColor="@color/teal_200"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="BiWeekly"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:elevation="10dp"
+                        app:chipBackgroundColor="@color/white"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="Monthly"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:elevation="10dp"
+                        app:chipBackgroundColor="@color/white"/>
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/work_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/work_period_chip_group"
+                android:text="Work Time"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/work_time_chip_group"
+                android:scrollbars="none"
+                android:layout_below="@+id/work_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleLine="true"
+                    >
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="07:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:elevation="10dp"
+                        app:chipBackgroundColor="@color/white"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="10:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:elevation="10dp"
+                        app:chipBackgroundColor="@color/teal_200"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:text="14:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:elevation="10dp"
+                        app:chipBackgroundColor="@color/white"/>
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </HorizontalScrollView>
+
+
+
+            <ImageButton
+                android:id="@+id/phone"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/work_time_chip_group"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_phone"
+                android:layout_marginTop="100dp"
+                app:tint="@color/black"
+                android:elevation="10dp"
+                android:background="@drawable/gray_circle_line"/>
+
+            <ImageButton
+                android:id="@+id/chat"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_chat"
+                android:layout_toEndOf="@+id/phone"
+                android:layout_marginStart="5dp"
+                app:tint="@color/black"
+                android:elevation="10dp"
+                android:background="@drawable/gray_circle_line"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="8dp"
+                android:text="Appointment"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/teal_200"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_selector"
+        android:checked="true"
+        android:title="Home"/>
+    <item android:id="@+id/nav_search"
+        android:icon="@drawable/ic_search_selector"
+        android:title="Search"/>
+    <item android:id="@+id/nav_notification"
+        android:icon="@drawable/ic_notifications_selector"
+        android:title="Notification"/>
+    <item android:id="@+id/nav_message"
+        android:icon="@drawable/ic_messages_selector"
+        android:title="Message"/>
+</menu>

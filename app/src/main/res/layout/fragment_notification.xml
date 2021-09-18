@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.NotificationFragment">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:layout_marginTop="100dp"
+          android:background="@drawable/bg_layout">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="80dp"
+              android:layout_marginEnd="10dp">
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Active Orders (2)"
+                  android:textSize="20sp"
+                  android:textStyle="bold"
+                  android:textColor="@color/black"
+                  android:layout_marginStart="16dp"/>
+              <Button
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_marginEnd="16dp"
+                  android:backgroundTint="@color/teal_200"
+                  android:text="Orders"
+                  android:textAllCaps="false"
+                  android:textColor="@color/black"/>
+
+          </RelativeLayout>
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/order_RV"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginStart="5dp"
+              android:layout_marginEnd="5dp"
+              android:layout_marginBottom="100dp"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_marginTop="25dp"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:layout_width="match_parent"
+          android:layout_marginBottom="5dp"
+          android:layout_height="150dp"
+          android:background="@drawable/bg_header"
+          android:orientation="vertical">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+
+              <TextView
+                  android:text="Account Balance : $20000"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginTop="16dp"
+                  android:textSize="20sp"
+                  android:textColor="@color/black"
+                  android:textStyle="bold"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+
+          </RelativeLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="3dp"
+              android:layout_marginStart="15dp"
+              android:layout_marginEnd="15dp"
+              android:background="@drawable/bg_search"/>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:gravity="center"
+              tools:ignore = "RtlSymmetry">
+              
+              <RelativeLayout
+                  android:layout_width="70dp"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_horizontal">
+                  
+                  <ImageView
+                      android:id="@+id/image1"
+                      android:layout_width="50dp"
+                      android:layout_height="50dp"
+                      android:layout_centerHorizontal="true"
+                      android:src="@drawable/ic_drop_off"
+                      android:padding="12dp"
+                      android:background="@drawable/bg_search"/>
+                  <TextView
+                      android:layout_width="70dp"
+                      android:layout_height="wrap_content"
+                      android:text="Drop Off"
+                      android:layout_below="@+id/image1"
+                      android:textAlignment="center"
+                      android:textColor="@color/black"/>
+                  
+              </RelativeLayout>
+              <RelativeLayout
+                  android:layout_width="70dp"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_horizontal">
+
+                  <ImageView
+                      android:id="@+id/image2"
+                      android:layout_width="50dp"
+                      android:layout_height="50dp"
+                      android:layout_centerHorizontal="true"
+                      android:src="@drawable/ic_pick_up"
+                      android:padding="12dp"
+                      android:background="@drawable/bg_search"/>
+                  <TextView
+                      android:layout_width="70dp"
+                      android:layout_height="wrap_content"
+                      android:text="Pick Up"
+                      android:layout_below="@+id/image2"
+                      android:textAlignment="center"
+                      android:textColor="@color/black"/>
+
+              </RelativeLayout>
+              <RelativeLayout
+                  android:layout_width="70dp"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_horizontal">
+
+                  <ImageView
+                      android:id="@+id/image3"
+                      android:layout_width="50dp"
+                      android:layout_height="50dp"
+                      android:layout_centerHorizontal="true"
+                      android:src="@drawable/ic_promo"
+                      android:padding="12dp"
+                      android:background="@drawable/bg_search"/>
+                  <TextView
+                      android:layout_width="70dp"
+                      android:layout_height="wrap_content"
+                      android:text="Promo"
+                      android:layout_below="@+id/image3"
+                      android:textAlignment="center"
+                      android:textColor="@color/black"/>
+
+              </RelativeLayout>
+              <RelativeLayout
+                  android:layout_width="70dp"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_horizontal">
+
+                  <ImageView
+                      android:id="@+id/image4"
+                      android:layout_width="50dp"
+                      android:layout_height="50dp"
+                      android:layout_centerHorizontal="true"
+                      android:src="@drawable/ic_wallet"
+                      android:padding="12dp"
+                      android:background="@drawable/bg_search"/>
+                  <TextView
+                      android:layout_width="70dp"
+                      android:layout_height="wrap_content"
+                      android:text="Wallet"
+                      android:layout_below="@+id/image4"
+                      android:textAlignment="center"
+                      android:textColor="@color/black"/>
+
+              </RelativeLayout>
+
+          </LinearLayout>
+
+      </LinearLayout>
+
+  </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="240dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_container"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="100dp"
+    app:cardBackgroundColor="@color/gray"
+    app:cardCornerRadius="10dp"
+    android:elevation="0dp"
+    android:clickable="true"
+    android:focusable="true">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <ImageView
+           android:id="@+id/recommend_item_image"
+           android:layout_width="match_parent"
+           android:layout_height="150dp"
+           android:layout_margin="10dp"
+           android:scaleType="fitCenter"/>
+
+       <RelativeLayout
+           android:background="@color/white"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@+id/recommend_item_image">
+
+           <TextView
+               android:id="@+id/recommend_item_name"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Name"
+               android:textColor="@color/black"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               android:layout_toStartOf="@+id/recommend_item_price"
+               android:layout_margin="5dp"/>
+
+           <TextView
+               android:id="@+id/recommend_item_price"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentEnd="true"
+               android:text="$00"
+               android:layout_margin="5dp"
+               android:textColor="@color/teal_200"
+               android:textStyle="bold"
+               android:textSize="18sp"/>
+           <ImageView
+               android:id="@+id/recommend_item_location_img"
+               android:layout_width="20dp"
+               android:layout_height="20dp"
+               android:layout_marginTop="5dp"
+               android:src="@drawable/ic_location"
+               android:layout_below="@+id/recommend_item_name"
+               />
+           <TextView
+               android:id="@+id/recommend_item_location"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Location"
+               android:layout_toEndOf="@+id/recommend_item_location_img"
+               android:layout_alignParentEnd="true"
+               android:layout_below="@+id/recommend_item_name"
+               android:layout_margin="5dp"/>
+
+       </RelativeLayout>
+
+   </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
